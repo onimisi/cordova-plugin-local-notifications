@@ -40,7 +40,7 @@ exports._defaults = {
     groupSummary  : false,
     icon          : null,
     iconType      : null,
-    id            : null,
+    id            : 0,
     launch        : true,
     led           : true,
     lockscreen    : true,
@@ -661,10 +661,9 @@ exports._convertProperties = function (options) {
         }
     };
 
-    // removed this to prevent not a number error for iOS
-    // if (options.id) {
-    //     options.id = parseToInt('id', options);
-    // }
+    if (options.id) {
+        options.id = parseToInt('id', options);
+    }
 
     if (options.title) {
         options.title = options.title.toString();
