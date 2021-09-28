@@ -149,6 +149,8 @@ NSString * const kAPPGeneralCategory = @"GENERAL";
 
 /**
  * List of all triggered notifications.
+ * Haven't tested this out but could this be used to get the delivered notifications? I haven't been able to follow how it gets
+ * called by the getTriggered function though.
  *
  * @return [ NSArray<UNNotificationRequest*>* ]
  */

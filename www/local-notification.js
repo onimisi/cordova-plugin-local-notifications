@@ -40,7 +40,7 @@ exports._defaults = {
     groupSummary  : false,
     icon          : null,
     iconType      : null,
-    id            : 0,
+    id            : null,
     launch        : true,
     led           : true,
     lockscreen    : true,
@@ -55,6 +55,7 @@ exports._defaults = {
     sticky        : false,
     summary       : null,
     text          : '',
+    threadId      : null,
     timeoutAfter  : false,
     title         : '',
     trigger       : { type : 'calendar' },
@@ -661,9 +662,10 @@ exports._convertProperties = function (options) {
         }
     };
 
-    if (options.id) {
-        options.id = parseToInt('id', options);
-    }
+    // removed this to prevent not a number error for iOS
+    // if (options.id) {
+    //     options.id = parseToInt('id', options);
+    // }
 
     if (options.title) {
         options.title = options.title.toString();

@@ -65,6 +65,7 @@ static char optionsKey;
     self.badge              = options.badge;
     self.attachments        = options.attachments;
     self.categoryIdentifier = options.actionGroupId;
+    self.threadIdentifier   = options.threadId;
 }
 
 #pragma mark -
