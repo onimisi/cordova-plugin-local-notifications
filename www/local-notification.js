@@ -55,7 +55,6 @@ exports._defaults = {
     sticky        : false,
     summary       : null,
     text          : '',
-    threadId      : null,
     timeoutAfter  : false,
     title         : '',
     trigger       : { type : 'calendar' },
